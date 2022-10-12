@@ -127,7 +127,7 @@ function App() {
   return (
     <div className="">
       <div className="flex justify-center">
-        <h1 className="text-white absolute mt-20 lg:mt-32 text-3xl font-bold">
+        <h1 className="text-white absolute mt-20 lg:mt-32 text-4xl md:text-5xl lg:text-7xl font-bold duration-200">
           TO DO
         </h1>
         <img alt="img1" className="lg:hidden" src={img1} />
@@ -148,7 +148,7 @@ function App() {
         ))}
       </div>
 
-      <h1 className="text-white ml-4 mt-4">
+      <h1 className="text-white ml-4 lg:ml-20 mt-4">
         Tasks Completed: {completedNum()}/{todos.length}
       </h1>
     </div>
