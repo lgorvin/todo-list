@@ -7,9 +7,13 @@ function Todo({ todo, index, completeTodo, removeTodo }) {
   console.log(completeTodo);
   return (
     <div className="mt-4">
-      <div className="bgColor1 border-b-[1px] py-4 rounded-lg mx-4 lg:mx-20 grid grid-cols-5 grid-rows-none gap-2">
+      <div className="bgColor1 border-b-[1px] py-4 rounded-lg shadow-md shadow-slate-700 mx-4 lg:mx-20 grid grid-cols-5 grid-rows-none gap-2">
         <button
-          className="w-[25px] h-[25px] ml-6 lg:ml-28 rounded-full border-2"
+          className={
+            todo.isCompleted
+              ? "w-[25px] h-[25px] ml-6 lg:ml-28 bgGradient rounded-full border-2"
+              : "w-[25px] h-[25px] ml-6 lg:ml-28 rounded-full border-2"
+          }
           onClick={() => completeTodo(index)}
         >
           {todo.isCompleted ? (
@@ -32,7 +36,10 @@ function Todo({ todo, index, completeTodo, removeTodo }) {
         </button>
         <div
           className="col-span-3 text-white lg:text-2xl duration-200"
-          style={{ textDecoration: todo.isCompleted ? "line-through" : "" }}
+          style={{
+            textDecoration: todo.isCompleted ? "line-through" : "",
+            color: todo.isCompleted ? "gray" : "",
+          }}
         >
           {todo.text}
           <div className="float-right mr-[-40px] lg:mr-[-90px]">

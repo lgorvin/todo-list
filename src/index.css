@@ -12,3 +12,7 @@ body {
 .bgColor1 {
   background-color: hsl(235, 24%, 19%);
 }
+
+.bgGradient {
+  background-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));;
+}
